@@ -4,20 +4,20 @@ import joblib
 import numpy as np
 import plotly.graph_objects as go
 import time
-from streamlit_lottie import st_lottie
+#from streamlit_lottie import st_lottie
 import requests
 
 # ------------------- Helper to load Lottie Animations -------------------
-def load_lottie_url(url: str):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
+#def load_lottie_url(url: str):
+#    r = requests.get(url)
+#    if r.status_code != 200:
+#        return None
+#    return r.json()
 
 # ✅ Working Lottie Animations
-heartbeat_animation = load_lottie_url("https://assets9.lottiefiles.com/packages/lf20_tutvdkg0.json")
-success_animation   = load_lottie_url("https://assets2.lottiefiles.com/packages/lf20_jbrw3hcz.json")
-danger_animation    = load_lottie_url("https://assets1.lottiefiles.com/packages/lf20_qp1q7mct.json")
+#heartbeat_animation = load_lottie_url("https://assets9.lottiefiles.com/packages/lf20_tutvdkg0.json")
+#success_animation   = load_lottie_url("https://assets2.lottiefiles.com/packages/lf20_jbrw3hcz.json")
+#danger_animation    = load_lottie_url("https://assets1.lottiefiles.com/packages/lf20_qp1q7mct.json")
 
 # -------------------
 
@@ -142,10 +142,10 @@ with col1:
         prediction = model.predict(scaled_input)[0]
 
         if prediction == 1:
-            st_lottie(danger_animation, height=180, key="danger")
+            
             st.markdown('<div class="result" style="background-color:#ff4d4d; color:white;">⚠️ High Risk of Heart Disease</div>', unsafe_allow_html=True)
         else:
-            st_lottie(success_animation, height=180, key="success")
+            
             st.markdown('<div class="result" style="background-color:#2ecc71; color:white;">✅ Low Risk of Heart Disease</div>', unsafe_allow_html=True)
 
 # -------------------
