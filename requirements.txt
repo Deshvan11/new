@@ -1,17 +1,12 @@
-#Core application libraries for Python 3.12+
 streamlit==1.49.1
 pandas==2.2.2
 numpy==1.26.4
 scikit-learn==1.4.2
 joblib==1.4.2
-
-#Libraries for animations and data fetching
-streamlit-lottie>=0.2.7
 requests
 plotly
 
-#Optional, for enhanced logging
-rich==14.1.0
+# Optional, for enhanced logging (do NOT pin rich, let pip resolve)
 markdown-it-py==4.0.0
 mdurl==0.1.2
 pygments==2.19.2
