@@ -1,16 +1,16 @@
-Core application libraries
+#Core application libraries
 streamlit==1.27.0
 pandas==2.0.3
 numpy==1.26.4
 scikit-learn==1.3.2
 joblib==1.4.2
 
-Libraries for animations and data fetching
+#Libraries for animations and data fetching
 streamlit-lottie>=0.2.7
 requests
 plotly
 
-Optional, for enhanced logging
+#Optional, for enhanced logging
 rich==14.1.0
 markdown-it-py==4.0.0
 mdurl==0.1.2
